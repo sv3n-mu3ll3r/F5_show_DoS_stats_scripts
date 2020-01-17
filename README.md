@@ -1,5 +1,3 @@
-# F5_DDoS_show_scripts
-
 This script do display some DoS stats from F5 BIG-IP.
 
 A line will appear in green when traffic hits a vector without beeing in 'detection' or 'mitigation' mode.
