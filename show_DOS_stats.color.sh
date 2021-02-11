@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-tmctl -c dos_stat -s context_name,vector_name,attack_detected,stats_rate,drops_rate,int_drops_rate,ba_stats_rate,ba_drops_rate,bd_stats_rate,bd_drops_rate,mitigation_curr,detection,wl_count,hw_offload,int_dropped_bytes_rate,dropped_bytes_rate | sed -e 's/ /_/g' | column -s, -t | \
+tmctl -c dos_stat -s context_name,vector_name,attack_detected,stats_rate,drops_rate,int_drops_rate,ba_stats_rate,ba_drops_rate,bd_stats_rate,bd_drops_rate,mitigation_curr,detection,detection_ba,mitigation_ba,detection_bd,mitigation_bd,hw_offload | sed -e 's/ /_/g' | column -s, -t | \
 awk '{ \
         if ($1 == "context_name") print "\033[1m"$0"\033[0m";
         # Mitigation
